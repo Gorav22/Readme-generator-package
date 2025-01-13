@@ -2,8 +2,7 @@
 
 const fs = require("fs-extra");
 const glob = require("glob");
-const { generateReadmeTemplate } = require("./template");
-const { analyzeCode } = require("./geminiClient");
+const { analyzeCode } = require("./geminiclient");
 
 async function generateReadme() {
   console.log("Generating README.md...");

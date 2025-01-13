@@ -6,13 +6,12 @@ const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
-// const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-// const GEMINI_API_URL = process.env.GEMINI_API_URL;
 
-async function analyzeCode(fileName, codeContent) {
+async function analyzeCode(files, codeContent) {
   try {
-    prompt=`${fileName} ${codeContent}`
+    const prompt=`Generate the readme of the project whose code is below: ${codeContent}`;
     const result = await model.generateContent([prompt]);
+    console.log(result.response.text());
     return result.response.text();
   } catch (error) {
     console.error(`Error analyzing ${fileName}:`, error.response?.data || error.message);
