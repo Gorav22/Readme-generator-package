@@ -1,7 +1,7 @@
 {
   "name": "readme-generator",
   "version": "1.0.0",
-  "description": "It can Automatically generates the Readme of your project using ai by reading your code.",
+  "description": "This tool automatically generates README.md files for your projects by analyzing your codebase and using Google's Gemini API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "readme-generator",
     "Readme",
     "creator",
-    "Ai",
+    "Auto-readme-generator",
     "Readme",
     "Generator"
   ],
@@ -21,6 +21,7 @@
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "fs-extra": "^11.2.0",
-    "glob": "^11.0.1"
+    "glob": "^11.0.1",
+    "inquirer": "^12.3.1"
   }
 }

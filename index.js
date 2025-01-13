@@ -1,10 +1,25 @@
-#!/usr/bin/env node
-
 const fs = require("fs-extra");
 const glob = require("glob");
+const inquirer = require("inquirer");
 const { analyzeCode } = require("./geminiclient");
 
 async function generateReadme() {
+    console.log("Welcome to the README generator!");
+
+  // Step 1: Prompt the user for details
+  const answers = await inquirer.prompt([
+    {
+      type: "input",
+      name: "projectName",
+      message: "What is the name of your project?",
+    },
+    {
+      type: "input",
+      name: "githubURL",
+      message: "What is the GitHub repository URL for this project?",
+      default: "https://github.com/your-username/your-repository.git"
+    },
+  ]);
   console.log("Generating README.md...");
 
   // Find all relevant code files in the repository
@@ -18,7 +33,12 @@ async function generateReadme() {
     const codeContent = fs.readFileSync(file, "utf-8");
     combinedContent += `### File: ${file}\n\n${codeContent}\n\n`;
   });
-
+  if(answers.projectName){
+  combinedContent+=`project name: ${answers.projectName}`;
+  }
+  if(answers.githubURL){
+    combinedContent+=`Github url of the project: ${answers.githubURL}`;
+  }
   // Send the combined content to Gemini API
   const analysis = await analyzeCode("project-files", combinedContent);
 //   console.log(analysis)
