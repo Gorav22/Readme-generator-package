@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This tool automatically generates README.md files for your projects by analyzing your codebase and using Google's Gemini API.",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "@google/generative-ai": "^0.21.0",
+    "@inquirer/prompts": "^7.2.2",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "fs-extra": "^11.2.0",
