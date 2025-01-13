@@ -47,7 +47,7 @@ const readmeContent = generateReadmeTemplate(projectDetails);
 catch(err){
 
   // Write the README.md file
-  fs.writeFileSync("README.md",analysis );
+  fs.writeFileSync("README.md",analysis.replace("```markdown",''));
   console.log("README.md has been successfully generated!");
 }
 }

@@ -28,12 +28,10 @@ ${codeContent}
 
     const result = await model.generateContent([prompt]);
     const readme = result.response.text();
-    console.log(readme)
-    // Remove potential ````markdown` and ````` from the beginning and end
-    readme = readme.replace('/^```markdown\n/', '').replace('/\n```$'/, ''); 
+    console.log(readme); 
     return readme;
   } catch (error) {
-    console.error(`Error analyzing ${files}:`, error.response?.data || error.message);
+    console.error(error.message);
     return null;
   }
 }
