@@ -1,0 +1,26 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "It can Automatically generates the Readme of your project using ai by reading your code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "readme-generator",
+    "Readme",
+    "creator",
+    "Ai",
+    "Readme",
+    "Generator"
+  ],
+  "author": "Gorav Jindal",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "fs-extra": "^11.2.0",
+    "glob": "^11.0.1"
+  }
+}
