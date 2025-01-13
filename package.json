@@ -4,8 +4,11 @@
   "description": "This tool automatically generates README.md files for your projects by analyzing your codebase and using Google's Gemini API.",
   "main": "index.js",
   "type":"module",
+  "bin": {
+    "generate-readme": "./index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generate": "node index.js"
   },
   "keywords": [
     "readme-generator",
