@@ -1,8 +1,5 @@
-// const fs = require("fs-extra");
-// const glob = require("glob");
 import { glob } from "glob";
 import fs from "fs";
-// const inquirer = require("inquirer");
 import inquirer from "inquirer";
 import { analyzeCode } from "./geminiclient.js";
 
@@ -22,6 +19,7 @@ async function generateReadme() {
       message: "What is the GitHub repository URL for this project?",
       default: "https://github.com/your-username/your-repository.git",
     },
+    
   ]);
   console.log("Generating README.md...");
 
@@ -43,8 +41,7 @@ async function generateReadme() {
 
   // Send the combined content to Gemini API
   const analysis = await analyzeCode("project-files", combinedContent);
-  //   console.log(analysis)
-  // Handle Gemini API response to generate README.md content
+
   if (!analysis) {
     console.error(
       "Failed to generate project analysis. Check Gemini API response."

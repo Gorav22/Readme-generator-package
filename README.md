@@ -1,6 +1,6 @@
 # Auto-README Generator
 
-This tool automatically generates README files for your projects by analyzing your codebase and using Google's Gemini API.
+This project automatically generates README files for your code repositories using the power of the Google Gemini API. It analyzes your codebase, extracts key information, and creates a structured README with sections like Introduction, Installation, Features, and more.
 
 ## Installation
 
@@ -13,7 +13,7 @@ This tool automatically generates README files for your projects by analyzing yo
 2. **Navigate to the project directory:**
 
    ```bash
-   cd Readme-generator-package
+   cd your-repository
    ```
 
 3. **Install dependencies:**
@@ -22,46 +22,46 @@ This tool automatically generates README files for your projects by analyzing yo
    npm install
    ```
 
-4. **Set up your Gemini API Key:**
+4. **Set up your Google Gemini API Key:**
 
-   Create a `.env` file in the root directory and add your Gemini API key:
+    Create a `.env` file in the root directory and add your API key:
 
-   ```
-   API_KEY=YOUR_GEMINI_API_KEY
-   ```
+    ```
+    API_KEY=YOUR_GEMINI_API_KEY
+    ```
+
 
 ## Usage
 
-1.  Run the generator:
+1. Run the generator:
 
-    ```bash
-    node index.js
-    ```
+   ```bash
+   node index.js
+   ```
 
-2.  Answer the prompts for your project name and GitHub URL.
+2. Answer the prompts about your project name and GitHub URL.
 
-The script will analyze your code, generate a README.md file, and save it in the project's root directory.
+3. The script will analyze your code, generate the README content, and save it as `README.md` in your project's root directory.
 
 ## How it Works
 
-1.  **Code Collection:** The script gathers all `.js`, `.ts`, `.jsx`, `.tsx`, and `.py` files in your project (excluding `node_modules`, `dist`, and `build` directories).
-2.  **Code Analysis:**  It sends the combined code content to the Gemini API for analysis using a prompt engineered to extract project details like description, installation steps, tech stack, and features.
-3.  **README Generation:**  It uses the analysis results to populate a predefined README template (`template.js`) and creates the `README.md` file.
+1. **Code Analysis:** The script uses `glob` to find all relevant code files (JS, TS, Python) in your project, excluding common directories like `node_modules`.
+2. **Gemini API Integration:** It sends the combined code content to the Google Gemini API with a prompt designed to generate a README.md file. The prompt requests specific sections and provides guidelines for a clear and concise output.
+3. **README Generation:** The `template.js` file provides a template structure for the README.  The script populates this template with data received from the Gemini API's analysis.
+4. **File Creation:** The generated README content is written to `README.md`.
 
-## Tech Stack
+## Dependencies
 
-* **Gemini API:**  For code analysis and README content generation.
-* **Node.js:**  Runtime environment.
-* **Inquirer:**  For interactive prompts.
-* **Glob:**  For file pattern matching.
-* **fs (File System):** For file reading and writing.
-* **dotenv:** For environment variable management.
-
+* `glob`: For finding files matching a pattern.
+* `fs`: For file system operations.
+* `inquirer`: For interactive command-line prompts.
+* `@google/generative-ai`:  For interacting with the Google Gemini API.
+* `dotenv`: For loading environment variables.
 
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request.
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ## License
 

@@ -7,13 +7,16 @@
   "bin": {
     "generate-readme": "./index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gorav22/Readme-generator-package.git" 
+  },
   "scripts": {
     "generate": "node index.js"
   },
   "keywords": [
     "readme-generator",
-    "Readme",
-    "creator",
+    "Readme-creator",
     "Auto-readme-generator",
     "Readme",
     "Generator"
