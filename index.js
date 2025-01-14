@@ -3,7 +3,7 @@ import fs from "fs";
 import inquirer from "inquirer";
 import { analyzeCode } from "./geminiclient.js";
 
-async function generateReadme() {
+export async function generateReadme() {
   console.log("Welcome to the README generator!");
 
   // Step 1: Prompt the user for details
@@ -73,4 +73,5 @@ async function generateReadme() {
     console.log("README.md has been successfully generated!");
   }
 }
+
 generateReadme();
