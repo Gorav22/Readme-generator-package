@@ -1,2 +1,2 @@
-import { generateReadme } from "gorav-readme-generator/index.js";
+import { generateReadme } from "gorav-readme-generator";
 generateReadme();
