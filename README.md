@@ -37,7 +37,7 @@ generateReadme();
 Create a .env file in your project directory and add your Gemini API key:
 
 ```bash
-API_KEY="your-gemini-api-key"
+GEMINI_API_KEY="your-gemini-api-key"
 ```
 5. Run the Generator
 Run the .js file you created, and the package will generate a README.md file for your project.
