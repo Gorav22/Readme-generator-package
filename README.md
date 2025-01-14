@@ -45,3 +45,16 @@ Run the .js file you created, and the package will generate a README.md file for
 Check out a sample README.md file here:
 
 https://github.com/Gorav22/Readme-generator-package/blob/main/SampleREADME.md
+
+### How it Works
+1. Collects Project Information: Prompts the user for project name and GitHub URL.
+2. Code Analysis: Scans the project directory for .js, .ts, .jsx, .tsx, and .py files (excluding   node_modules, dist, and build directories). Concatenates the content of these files.
+3. Gemini API Integration: Sends the combined code content to the Gemini API to analyze the project and generate README content.
+4. README Generation: Uses the analysis from the Gemini API to create a structured README.md file, including sections like Introduction, Installation, Features, and more. If the structured generation fails, it writes the raw Gemini output to README.md.
+
+### Dependencies
+1. glob: For file pattern matching.
+2. fs: For file system operations.
+3. inquirer: For interactive command-line prompts.
+4. @google/generative-ai: For interacting with the Gemini API.
+5. dotenv: For loading environment variables.
