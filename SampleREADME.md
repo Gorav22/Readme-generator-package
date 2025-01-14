@@ -1,32 +1,4 @@
-# Gorav-README Generator
 
-This tool automatically generates README.md files for your projects by analyzing your codebase and using the Gemini API.
-
-## Installation
-
-1. Open Terminal and run:
-   ```bash
-   npm i gorav-readme-generator
-   ```
-   or
-   ```bash
-   npm i -g gorav-readme-generator
-   ```
-2. create a file in your project directory by any name having ".js" extension
-   ```bash
-   touch filename.js
-   ```
-3. Import generateReadme from gorav-readme-generator
-   ```bash
-   import {generateReadme} from "gorav-readme-generator";
-   generateReadme();
-   ```
-4. Create .env file and write this:
-   ```bash
-   API_KEY="gemini api key"
-   ```
-5. Now run this file and it will create README.md file for that project the sample of that README.md    File is this
-```
 # Gorav-README Generator
 
 This tool automatically generates README.md files for your projects by analyzing your codebase and using the Gemini API.
@@ -44,7 +16,7 @@ This tool automatically generates README.md files for your projects by analyzing
    npm install
    ```
 4. **Gemini API Key:**  Set up a `.env` file in the root directory and add your Gemini API key:
-   ```bash
+   ```
    API_KEY=YOUR_GEMINI_API_KEY
    ```
 
@@ -60,32 +32,6 @@ This tool automatically generates README.md files for your projects by analyzing
    ```
    The script will prompt you for your project name and GitHub URL.
 3. **A `README.md` file will be generated** in the project root directory.
-
-## How it Works
-
-1. **Collects Project Information:** Prompts the user for project name and GitHub URL.
-2. **Code Analysis:** Scans the project directory for `.js`, `.ts`, `.jsx`, `.tsx`, and `.py` files (excluding `node_modules`, `dist`, and `build` directories).  Concatenates the content of these files.
-3. **Gemini API Integration:** Sends the combined code content to the Gemini API to analyze the project and generate README content.
-4. **README Generation:** Uses the analysis from the Gemini API to create a structured README.md file, including sections like Introduction, Installation, Features, and more.  If the structured generation fails, it writes the raw Gemini output to README.md.
-
-## Dependencies
-
-* `glob`: For file pattern matching.
-* `fs`: For file system operations.
-* `inquirer`: For interactive command-line prompts.
-* `@google/generative-ai`: For interacting with the Gemini API.
-* `dotenv`: For loading environment variables.
-
-
-## Contributing
-
-Contributions are welcome!  Please create an issue or submit a pull request.
-
-## License
-
-MIT
-
-```
 
 ## How it Works
 

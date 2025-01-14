@@ -1,18 +1,18 @@
 {
   "name": "gorav-readme-generator",
-  "version": "1.1.2",
+  "version": "1.1.5",
   "description": "This tool automatically generates README.md files for your projects by analyzing your codebase and using Google's Gemini API.",
-  "main": "index.js",
-  "type":"module",
+  "main": "generate.js",
+  "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gorav22/Readme-generator-package.git" 
+    "url": "git+https://github.com/Gorav22/Readme-generator-package.git"
   },
   "bin": {
-    "generate-readme": "index.js"
-},
+    "auto-generate-readme": "node generate.js"
+  },
   "scripts": {
-    "generate": "node index.js"
+    "generate": "node generate.js"
   },
   "keywords": [
     "readme-generator",
@@ -30,6 +30,7 @@
     "dotenv": "^16.4.7",
     "fs-extra": "^11.2.0",
     "glob": "^11.0.1",
+    "gorav-readme-generator": "^1.1.3",
     "inquirer": "^12.3.1"
   }
 }

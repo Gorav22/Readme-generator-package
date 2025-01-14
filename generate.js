@@ -74,4 +74,3 @@ export async function generateReadme() {
   }
 }
 
-generateReadme();
