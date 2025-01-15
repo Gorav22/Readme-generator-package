@@ -73,4 +73,3 @@ export async function generateReadme() {
     console.log("README.md has been successfully generated!");
   }
 }
-

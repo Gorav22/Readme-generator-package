@@ -11,6 +11,6 @@
   "type": "module",
   "description": "",
   "dependencies": {
-    "gorav-readme-generator": "^1.1.4"
+    "gorav-readme-generator": "^1.1.10"
   }
 }

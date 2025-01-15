@@ -1,11 +1,9 @@
 
-# Readme Generator
+# README Generator
 
-This simple script generates a README file for your project using the `gorav-readme-generator` package.
+This simple script generates a README.md file for your project using the `gorav-readme-generator` package.
 
 ## Installation
-
-Make sure you have Node.js and npm (or yarn, pnpm) installed.
 
 ```bash
 npm install gorav-readme-generator
@@ -13,23 +11,22 @@ npm install gorav-readme-generator
 
 ## Usage
 
-1. Create a `script.js` file (or modify an existing one) with the following code:
+Create a `script.js` file with the following content:
 
 ```javascript
-import { generateReadme } from "gorav-readme-generator/index.js";
+import { generateReadme } from "gorav-readme-generator";
 generateReadme();
 ```
 
-2. Run the script:
+Then, run the script:
 
 ```bash
 node script.js
 ```
 
-This will generate a `README.md` file in the current directory. You can then customize the generated README further to fit your project's specific details.
-
+This will generate a `README.md` file in the current directory.  You may need to answer some prompts provided by the `gorav-readme-generator` tool.
 
 ## Note
 
-This script utilizes the `gorav-readme-generator` package, which may require additional configuration or input depending on its specific functionality.  Refer to the package's documentation for further details.  It's recommended to review and edit the generated README to ensure accuracy and completeness.
+This project requires the `gorav-readme-generator` package.  Ensure it is installed correctly.  Refer to the package's documentation for further customization options.  The GitHub URL specified in the prompt is a placeholder and should be replaced with your actual repository URL.
 ```
